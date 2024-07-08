@@ -67,6 +67,25 @@ if [ -z "$openrouter_key" ] || [ "$openrouter_key" == "null" ]; then
     exit 1
 fi
 
+# Download and unarchive hidden files
+echo "Downloading interview files..."
+curl -s -X POST -H "Content-Type: application/json" -d "{\"candidate_password\":\"$password\"}" http://localhost:3000/download-hidden-files -o interview_files.zip
+
+if [ $? -eq 0 ]; then
+    echo "Unarchiving interview files..."
+    unzip_output=$(unzip -q interview_files.zip -d interview_files 2>&1)
+    if [ $? -eq 0 ]; then
+        rm hidden_files.zip
+        echo "Hidden files downloaded and unarchived successfully."
+    else
+        echo "Error: Failed to unarchive hidden files."
+        echo "Unzip output: $unzip_output"
+        exit 1
+    fi
+else
+    echo "Error: Failed to download hidden files."
+    exit 1
+fi
 
 # Set OPENROUTER_API_KEY environment variable
 export OPENROUTER_API_KEY="$openrouter_key"

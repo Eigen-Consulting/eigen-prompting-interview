@@ -53,7 +53,11 @@ fi
 echo
 
 # Make HTTP request to server and parse JSON for openrouterKey and error message
-response=$(curl -s -X POST -H "Content-Type: application/json" -d "{\"candidate_password\":\"$password\"}" http://localhost:3000/verify-password)
+# Define base URL
+base_url="https://prompting-interview.onrender.com"
+
+# Verify password and get OpenRouter key
+response=$(curl -s -X POST -H "Content-Type: application/json" -d "{\"candidate_password\":\"$password\"}" "$base_url/verify-password")
 status_code=$(echo "$response" | jq -r '.status // empty')
 openrouter_key=$(echo "$response" | jq -r '.openrouterKey')
 error_message=$(echo "$response" | jq -r '.error')
@@ -69,7 +73,7 @@ fi
 
 # Download and unarchive hidden files
 echo "Downloading interview files..."
-curl -s -X POST -H "Content-Type: application/json" -d "{\"candidate_password\":\"$password\"}" https://prompting-interview.onrender.com/download-hidden-files-prompting -o interview_files.zip
+curl -s -X POST -H "Content-Type: application/json" -d "{\"candidate_password\":\"$password\"}" "$base_url/download-hidden-files-prompting" -o interview_files.zip
 
 if [ $? -eq 0 ]; then
     echo "Unarchiving interview files..."

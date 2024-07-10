@@ -76,3 +76,5 @@ This script performs the following actions:
 6. Sets the `OPENROUTER_API_KEY` environment variable with the retrieved key.
 
 After running this script, you'll be ready to start the interview session with the necessary environment setup and API key in place.
+
+The files that you'll be working in will be in the directory `interview_files`.

@@ -16,6 +16,15 @@ During this interview session, you can expect:
 7. Questions about your experience with LLMs and prompt engineering
 8. Questions about LLMs at a high level and understanding your intuitions
 
+The format of the interview is as follows:
+- There are 4 levels
+- Each level tests a different skill in prompt engineering
+- Some levels have right answers (verified by test cases, and there can be multiple right answers), and some levels are more open-ended
+
+Each level, you'll be switching between a `prompts.txt` file, a `description.md` for each level's instructions, and a `tests.yaml` where you can write test cases. The folder attached has a dummy problem that emulates the structure.
+
+If you need to brush up on prompt engineer and LLM's, [this is a great resource](https://thenameless.net/astral-kit/anthropic-peit-00)
+
 
 ## Pre-Interview Setup
 

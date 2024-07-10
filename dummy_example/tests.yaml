@@ -1,0 +1,5 @@
+- vars:
+    hello_world: "Hello World"
+  assert:
+    - type: contains
+      value: "Hello World"

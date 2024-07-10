@@ -1,0 +1,15 @@
+# Learn more about building a configuration: https://promptfoo.dev/docs/configuration/guide
+description: "Eigen example interview"
+
+prompts:
+  - file://./prompt.txt
+
+
+providers:
+  - id: openrouter:openai/gpt-4o			 # or any other chat model
+    config:
+      temperature: 0
+
+  
+
+tests: ./tests.yaml

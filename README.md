@@ -1,9 +1,21 @@
 # Prompting Interview Session README
 
-Welcome to the interview! This session focuses on prompting LLMs to get desired outputs. It's one of the most important things we do at Eigen, and we want to get a feel
-for your intuition with the skill. It's ok if you haven't had to do it for work; if you've been using tools like ChatGPT, it's very similar.
+Welcome to the interview! This session focuses on prompting LLMs to get desired outputs. It's one of the most important things we do at Eigen, and we want to get a feel for your intuition with the skill. It's ok if you haven't had to do it for work; if you've been using tools like ChatGPT, it's very similar.
 
-Please follow these steps to get set up for your interview:
+
+## What to expect
+
+During this interview session, you can expect:
+
+1. A focus on practical prompting skills
+2. Hands-on exercises using Promptfoo
+3. Evaluation of your ability to craft effective prompts
+4. Discussion of your thought process and reasoning
+5. Opportunities to demonstrate your problem-solving skills
+6. Feedback on your prompting techniques
+7. Questions about your experience with LLMs and prompt engineering
+8. Questions about LLMs at a high level and understanding your intuitions
+
 
 ## Pre-Interview Setup
 
@@ -51,7 +63,7 @@ This script performs the following actions:
 2. Verifies that `npx promptfoo@latest` can be run successfully.
 3. Creates an alias `eval` for running `npx promptfoo@latest eval`.
 4. Prompts you for the password provided by your interviewer.
-5. Sends a request to our servers to verify the password and retrieve the OpenRouter API key (which will power your LLM requests).
+5. Sends a request to our servers to verify the password and retrieve the OpenRouter API key (which will power your llm requests).
 6. Sets the `OPENROUTER_API_KEY` environment variable with the retrieved key.
 
 After running this script, you'll be ready to start the interview session with the necessary environment setup and API key in place.

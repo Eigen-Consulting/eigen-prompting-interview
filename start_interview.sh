@@ -69,21 +69,21 @@ fi
 
 # Download and unarchive hidden files
 echo "Downloading interview files..."
-curl -s -X POST -H "Content-Type: application/json" -d "{\"candidate_password\":\"$password\"}" http://localhost:3000/download-hidden-files -o interview_files.zip
+curl -s -X POST -H "Content-Type: application/json" -d "{\"candidate_password\":\"$password\"}" https://prompting-interview.onrender.com/download-hidden-files-prompting -o interview_files.zip
 
 if [ $? -eq 0 ]; then
     echo "Unarchiving interview files..."
     unzip_output=$(unzip -q interview_files.zip -d interview_files 2>&1)
     if [ $? -eq 0 ]; then
-        rm hidden_files.zip
-        echo "Hidden files downloaded and unarchived successfully."
+        rm interview_files.zip
+        echo "Interview files downloaded and unarchived successfully."
     else
-        echo "Error: Failed to unarchive hidden files."
+        echo "Error: Failed to unarchive interview files."
         echo "Unzip output: $unzip_output"
         exit 1
     fi
 else
-    echo "Error: Failed to download hidden files."
+    echo "Error: Failed to download interview files."
     exit 1
 fi
 

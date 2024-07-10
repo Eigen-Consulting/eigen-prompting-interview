@@ -21,7 +21,7 @@ The format of the interview is as follows:
 - Each level tests a different skill in prompt engineering
 - Some levels have right answers (verified by test cases, and there can be multiple right answers), and some levels are more open-ended
 
-Each level, you'll be switching between a `prompts.txt` file, a `description.md` for each level's instructions, and a `tests.yaml` where you can write test cases. The folder attached has a dummy problem that emulates the structure.
+Each level, you'll be switching between a `prompts.txt` file, a `description.md` for each level's instructions, and a `tests.yaml` where you can write test cases. The folder attached has a dummy problem that emulates the structure. With your interviewer, you'll be engaging in writing in each of these files and discussing your thought process.
 
 If you need to brush up on prompt engineer and LLM's, [this is a great resource](https://thenameless.net/astral-kit/anthropic-peit-00)
 
